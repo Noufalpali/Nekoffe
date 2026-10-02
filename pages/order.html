@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Nekoffe</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Nekoffe ^_^</div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../index.html#about">About Us</a>
+            <a href="../index.html#menu">Our Menu</a>
+        </nav>
+    </header>
+
+    <main class="order-page">
+        <form id="orderForm">
+            <div class="order-container">
+                <div class="section-title">
+                    <h1>Start Ordering Now</h1>
+                    <p>Choose your dish today~</p>
+                </div>
+
+                <div class="form-section">
+                    <h2>Customer Information</h2>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Choose Your Menu</h2>
+                    <p class="form-description">Use + / &minus; to set the quantity of each menu.</p>
+                    <div class="menu-selection" id="menuList"></div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Sugar Amount</h2>
+                    <div class="sugar-options">
+                        <label><input type="radio" name="sugar" value="100%" checked>100%</label>
+                        <label><input type="radio" name="sugar" value="75%">75%</label>
+                        <label><input type="radio" name="sugar" value="50%">50%</label>
+                        <label><input type="radio" name="sugar" value="25%">25%</label>
+                        <label><input type="radio" name="sugar" value="0%">0%</label>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Order Type</h2>
+                    <div class="order-type">
+                        <label><input type="radio" name="order_type" value="pickup" checked>Pick Up</label>
+                        <label><input type="radio" name="order_type" value="delivery">Delivery</label>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Address / Notes</h2>
+                    <textarea name="address" rows="4" placeholder="Write your address or special notes..."></textarea>
+                </div>
+
+                <div class="form-section">
+                    <h2>Order Summary</h2>
+                    <div id="summaryItems"></div>
+                    <div class="row total"><span>Total</span><span id="summaryTotal">Rp0</span></div>
+                </div>
+
+                <div class="submit-area">
+                    <button type="submit" class="button">Continue to Payment</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/order.js"></script>
+</body>
+</html>

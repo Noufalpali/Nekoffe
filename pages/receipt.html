@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt - Nekoffe</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Nekoffe ^_^</div>
+        <nav><a href="../index.html">Home</a></nav>
+    </header>
+
+    <main class="order-page">
+        <div class="order-container">
+            <div class="section-title">
+                <h1>Payment Successful</h1>
+                <p>Here is your receipt</p>
+            </div>
+            <div id="receipt" class="receipt"></div>
+            <div class="submit-area">
+                <button class="button" onclick="window.print()">Print Receipt</button>
+                <button class="button" id="newOrder">New Order</button>
+            </div>
+        </div>
+    </main>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/receipt.js"></script>
+</body>
+</html>

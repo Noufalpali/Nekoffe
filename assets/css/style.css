@@ -63,7 +63,7 @@ body {
     justify-content: center;
     text-align: left;
     position: relative;
-    background-image:url("background.png");
+    background-image:url("../img/background.png");
 
     background-size: cover;
     background-position: center;
@@ -424,4 +424,37 @@ footer {
         height: 70px;
     }
 
+}
+
+.row { display: flex; justify-content: space-between; gap: 15px; padding: 6px 0; }
+.row.total { font-weight: bold; font-size: 18px; border-top: 2px dashed #ddd; margin-top: 8px; padding-top: 12px; }
+
+.menu-option.selected { border-color: #b87945; background-color: #fff8f0; }
+.qty { display: flex; align-items: center; gap: 10px; }
+.qty button { width: 32px; height: 32px; border: none; border-radius: 50%; background-color: #975555; color: #fff; font-size: 18px; cursor: pointer; }
+.qty button:hover { background-color: #5e3333; }
+.qty b { min-width: 20px; text-align: center; }
+
+.method-card { display: flex; align-items: center; gap: 15px; padding: 15px; margin-bottom: 12px; border: 2px solid #eee; border-radius: 10px; cursor: pointer; transition: 0.3s; }
+.method-card:hover, .method-card.selected { border-color: #b87945; }
+.method-card > div { flex: 1; }
+.method-card small { color: #777; }
+.method-card strong { color: #b87945; font-size: 18px; }
+.method-card input { accent-color: #b87945; }
+.method-detail { margin-top: 15px; }
+.qr-box { width: 220px; height: 220px; margin: 10px auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border: 3px dashed #975555; border-radius: 12px; font-size: 32px; font-weight: bold; color: #975555; }
+.qr-box small { font-size: 12px; font-weight: normal; color: #777; }
+
+.button:disabled { background-color: #bbb; cursor: not-allowed; transform: none; }
+.submit-area .button { margin: 0 6px; }
+
+.receipt { max-width: 380px; margin: 0 auto; background: #fff; padding: 30px 25px; border-radius: 4px; font-family: "Courier New", monospace; font-size: 14px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+.receipt h2 { text-align: center; }
+.receipt .center { text-align: center; }
+.receipt hr { border: none; border-top: 1px dashed #999; margin: 10px 0; }
+
+@media print {
+    .navbar, .submit-area, .section-title { display: none; }
+    .order-page { padding: 0; background: #fff; }
+    .receipt { box-shadow: none; }
 }
