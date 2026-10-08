@@ -30,3 +30,26 @@ const store = {
 const itemsHTML = items => items.map(i =>
   `<div class="row"><span>${i.qty} x ${i.name}</span><span>${rupiah(i.price * i.qty)}</span></div>`
 ).join("");
+
+const member = [
+  {
+    username: "shakillamarsya",
+    password: "0901282530086"
+  },
+  {
+    username: "Noufalpali",
+    password: "09012825300"
+  },
+  {
+    username: "aryaputrasat",
+    password: "09012825300"
+  },
+  {
+    username: "farhandays",
+    password: "09012825300"
+  },
+  {
+    username: "lilkyogre03",
+    password: "09012825300"
+  }
+];

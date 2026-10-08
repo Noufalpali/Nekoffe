@@ -458,3 +458,52 @@ footer {
     .order-page { padding: 0; background: #fff; }
     .receipt { box-shadow: none; }
 }
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login {
+    background: rgb(147, 84, 84);
+    padding: 30px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.login h2 {
+    text-align: center;
+}
+
+.login input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+.login button {
+    width: 100%;
+    padding: 10px;
+    background: #f8c3d8;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background: #f8c3d8;
+}
+
+#error {
+    color: red;
+    text-align: center;
+    display: none;
+}
+
+.back {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
