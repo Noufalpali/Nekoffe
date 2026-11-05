@@ -4,101 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nekoffe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@600;800&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/extra.css">
 </head>
-
 <body>
-
-    <header class="navbar">
-        <div class="logo">
-         Nekoffe ^_^ 
+<header class="navbar">
+    <div class="logo"><a href="index.html">Nekoffe ^_^</a></div>
+    <nav>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#menu">Our Menu</a>
+        <a href="pages/cats.html">Meet the Cats</a>
+        <a href="pages/order.html">Order as a Guest</a>
+        <a href="login.html">Member Login</a>
+    </nav>
+</header>
+<section class="hero2">
+    <div>
+        <p class="small-title">Hello, our lovely customers!</p>
+        <h1>Nekoffe Disini,</h1>
+        <p>untuk memberikan Anda pengalaman terbaik "Nya!". Pesan minuman hangat, ambil sepotong kue gulung, dan sapa kucing-kucing kami.</p>
+        <div class="cta">
+            <a href="pages/order.html" class="button">Order as a Guest</a>
+            <a href="pages/cats.html" class="button ghost">Meet the Cats</a>
         </div>
-        <nav>
-            <a href="#about">About Us</a>
-            <a href="#menu">Our Menu</a>
-            <a href="pages/order.html">Order as a Guest</a>
-            <a href="login.html">Member Login</a>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <img src="assets/img/LOGO.png" alt="Nekoffe Logo" class="hero-logo">
-            <p class="small-title">
-                Hello, our lovely customers!
-            </p>
-            <h1>
-                Nekoffe is here,
-            </h1>
-            <p>
-                to give you the best "Nya!" experience
-            </p>
-            <a href="pages/order.html" class="button">
-                Order as a Guest
-            </a>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="section-content">
-            <p class="small-title">
-                ABOUT US
-            </p>
-            <h2>
-                At Nekoffe,
-            </h2>
-            <p>
-                we gave our Lovely Customers an amazing experience, and build chemistry with our Cat Family.
-            </p>
-        </div>
-    </section>
-
-    <section id="menu" class="our-menu">
-        <div class="section-title">
-            <p class="small-title">
-                OUR MENU
-            </p>
-            <h2>
-                Our Favorite
-            </h2>
-        </div>
-
-        <div class="menu-preview">
-            <div class="preview-card">
-                <h3>Americano</h3>
-                <p>Espresso with water</p>
-            </div>
-
-            <div class="preview-card">
-                <h3>Cafe Latte</h3>
-                <p>Espresso with milk</p>
-            </div>
-
-            <div class="preview-card">
-                <h3>Cafe Mocha</h3>
-                <p>Espresso, milk, with chocolate</p>
-            </div>
-
-            <div class="preview-card">
-                <h3>Caramel Macchiato</h3>
-                <p>Espresso, milk, vanilla syrup, with caramel</p>
-            </div>
-
-            <div class="preview-card">
-                <h3>Melon Cream Soda</h3>
-                <p>Melon syrup, sparkling water, topped with ice cream</p>
-            </div>
-
-            <div class="preview-card">
-                <h3>Roll Cake</h3>
-                <p>Rolled chocolate cake</p>
-            </div>
-        </div>
-
-        <a href="pages/order.html" class="button">
-            See Menu & Order
-        </a>
-    </section>
-
+    </div>
+    <div class="art">
+        <img src="assets/img/LOGO.png" alt="Nekoffe logo: a cat-shaped roll cake with strawberry">
+    </div>
+</section>
+<div class="strip" aria-hidden="true"><div><span>Nya!</span><span>Fresh espresso</span><span>Roll cake</span><span>Meet our Cat Family</span><span>Melon cream soda</span><span>Nya!</span><span>Fresh espresso</span><span>Roll cake</span><span>Meet our Cat Family</span><span>Melon cream soda</span></div></div>
+<section id="about" class="wrap">
+    <div class="head"><p class="small-title">About us</p><h2>At Nekoffe,</h2>
+    <p>Kami memberikan pengalaman luar biasa kepada pelanggan kami yang tercinta, dan membangun ikatan dengan Keluarga Kucing kami.</p></div>
+    <div class="features">
+        <div class="feat"><h3>Made fresh</h3><p>Minuman espresso, soda, dan kue disiapkan saat Anda memesan.</p></div>
+        <div class="feat"><h3>Cat Family</h3><p>Kucing-kucing penghuni kafe kami bebas berkeliaran. Belai mereka dengan lembut dan biarkan mereka mendekati Anda.</p></div>
+        <div class="feat"><h3>Cozy corners</h3><p>Pilih tempat duduk, bersantailah sejenak, atau bawa pesanan Anda untuk dibawa pulang.</p></div>
+    </div>
+</section>
+<section id="menu" class="wrap alt" style="max-width:none"><div style="max-width:1150px;margin:0 auto">
+    <div class="head"><p class="small-title">Our menu</p><h2>Our Favorite</h2></div>
+    <div class="dishes">
+<article class="dish"><img src="assets/img/americanp.jpg" alt="Americano" loading="lazy"><div><h3>Americano</h3><p>Espresso dengan air</p><b>Rp20.000</b></div></article>
+<article class="dish"><img src="assets/img/latte.jpg" alt="Cafe Latte" loading="lazy"><div><h3>Cafe Latte</h3><p>Espresso dengan susu</p><b>Rp25.000</b></div></article>
+<article class="dish"><img src="assets/img/mocha.jpg" alt="Cafe Mocha" loading="lazy"><div><h3>Cafe Mocha</h3><p>Espresso, susu, dengan chocolate</p><b>Rp25.000</b></div></article>
+<article class="dish"><img src="assets/img/machiato.jpg" alt="Caramel Macchiato" loading="lazy"><div><h3>Caramel Macchiato</h3><p>Espresso, susu, sirup vanila, dengan karamel</p><b>Rp32.000</b></div></article>
+<article class="dish"><img src="assets/img/melon.jpg" alt="Melon Cream Soda" loading="lazy"><div><h3>Melon Cream Soda</h3><p>Sirup melon, air berkarbonasi, ditaburi es krim</p><b>Rp28.000</b></div></article>
+<article class="dish"><img src="assets/img/rollcake.jpg" alt="Roll Cake" loading="lazy"><div><h3>Roll Cake</h3><p>Kue cokelat yang dililitkan</p><b>Rp25.000</b></div></article>
+    </div>
+    <p class="center"><a href="pages/order.html" class="button">See Menu &amp; Order</a></p>
+</div></section>
+<section class="wrap">
+    <div class="head"><p class="small-title">How to order</p><h2>Three easy steps</h2></div>
+    <ol class="steps">
+        <li class="step"><h3>Pick your menu</h3><p>Pilih minuman dan kue, atur jumlah dan tingkat kemanisannya.</p></li>
+        <li class="step"><h3>Pay your way</h3><p>Cash, QRIS, atau transfer bank.</p></li>
+        <li class="step"><h3>Get your receipt</h3><p>Cetaklah atau tunjukkan di konter.</p></li>
+    </ol>
+</section>
+<section class="wrap alt" style="max-width:none"><div style="max-width:1150px;margin:0 auto">
+    <div class="head"><p class="small-title">Our Cat Family</p><h2>Sapa para penghuni</h2></div>
+    <div class="cats" id="cats" data-base=""></div>
+    <p class="center"><a href="pages/cats.html" class="button">Meet all the cats</a></p>
+</div></section>
+<footer>
+    <p>Nekoffe ^_^ &nbsp; Coffee, cake, and our Cat Family.</p>
+    <p><a href="index.html" style="color:#f4a3b0">Home</a> &nbsp; <a href="pages/cats.html" style="color:#f4a3b0">Meet the Cats</a> &nbsp; <a href="pages/order.html" style="color:#f4a3b0">Order</a></p>
+</footer>
+<script src="assets/js/cats.js"></script>
+<script>renderCats(document.getElementById("cats"),3)</script>
+<script src="assets/js/site.js"></script>
 </body>
 </html>

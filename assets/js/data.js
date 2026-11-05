@@ -31,7 +31,7 @@ const itemsHTML = items => items.map(i =>
   `<div class="row"><span>${i.qty} x ${i.name}</span><span>${rupiah(i.price * i.qty)}</span></div>`
 ).join("");
 
-const member = [
+const MEMBERS = [
   {
     username: "shakillamarsya",
     password: "0901282530086"
