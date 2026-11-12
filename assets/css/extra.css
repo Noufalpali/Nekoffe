@@ -508,3 +508,62 @@ html.cat-on input,html.cat-on textarea {
 @media print {
     .pt,.cc,.burger,footer{display:none!important}
 }
+
+/* testimonials */
+.testimonials {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));
+    gap:clamp(16px,2.5vw,28px)
+}
+
+.testi-card {
+    background:#fff;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:var(--shadow-card);
+    display:flex;
+    flex-direction:column;
+    transition:transform .3s
+}
+
+.testi-card:hover {
+    transform:translateY(-6px)
+}
+
+.testi-img-wrap {
+    width:100%;
+    aspect-ratio:4/3;
+    overflow:hidden;
+    background:#fbe9dc
+}
+
+.testi-img-wrap img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block
+}
+
+.testi-card blockquote {
+    padding:20px 22px 24px;
+    margin:0;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:12px
+}
+
+.testi-card blockquote p {
+    font-size:clamp(14px,1.1vw,16px);
+    line-height:1.6;
+    color:#444;
+    margin:0
+}
+
+.testi-card blockquote cite {
+    font-style:normal;
+    font-weight:800;
+    font-family:var(--font-head);
+    color:var(--choc);
+    font-size:15px
+}
