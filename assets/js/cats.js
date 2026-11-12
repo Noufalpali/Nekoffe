@@ -21,10 +21,5 @@ function renderCats(el, limit) {
       <div>${c.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
       <p>${c.bio}</p>
       <p class="meta">Favorite spot: ${c.spot}</p>
-      <button class="button pet" type="button">Pet ${c.name}</button>
     </article>`).join("");
-  el.onclick = e => {
-    const b = e.target.closest(".pet");
-    if (b) { b.n = (b.n || 0) + 1; b.textContent = `Purr x${b.n}`; }
-  };
 }
