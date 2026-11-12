@@ -224,8 +224,23 @@ a:focus-visible,button:focus-visible {
 }
 
 .feat {
+    border-top:0;
+    padding-top:0
+}
+
+.feat img {
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+    border-radius:16px;
+    margin-bottom:16px;
+    background:#fbe9dc
+}
+
+.feat h3 {
     border-top:3px solid #f4a3b0;
-    padding-top:16px
+    padding-top:14px;
+    margin-top:0!important
 }
 
 .step {
