@@ -1,6 +1,7 @@
 ﻿/* Nekoffe - fonts, landing, cats page, page transition, cat cursor (loads after style.css) */
 :root {
-    --font-main:'Nunito','Trebuchet MS',sans-serif;--font-head:'Grandstander','Trebuchet MS',sans-serif;
+    --font-main:'Nunito','Trebuchet MS',sans-serif;
+    --font-head:'Grandstander','Trebuchet MS',sans-serif;
     --color-pink:#e8788c;
     --color-bg:#fff6e6;
     --choc:#7a3b3b

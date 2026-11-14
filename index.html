@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@600;800&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/extra.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 <header class="navbar">
@@ -101,9 +103,61 @@
     <div class="cats" id="cats" data-base=""></div>
     <p class="center"><a href="pages/cats.html" class="button">Meet all the cats</a></p>
 </div></section>
-<footer>
-    <p>Nekoffe ^_^ &nbsp; Coffee, cake, and our Cat Family.</p>
-    <p><a href="index.html" style="color:#f4a3b0">Home</a> &nbsp; <a href="pages/cats.html" style="color:#f4a3b0">Meet the Cats</a> &nbsp; <a href="pages/order.html" style="color:#f4a3b0">Order</a></p>
+<footer id="footer">
+    <div>
+        <p class="nekoffe"><b>Nekoffe ^_^</b></p>
+        <p>Coffee, cake, and our Cat Family.</p>
+        <p>A cozy little place where coffee meets our lovely cats.</p>
+    </div>
+
+    <hr>
+
+    <div class="footer-layout">
+        <div class="explore">
+            <p class="footer-title"><b>Explore</b></p>
+            <p><a href="index.html" style="text-decoration: none;">Home</a></p>
+            <p><a href="pages/cats.html">Meet the Cats</a></p>
+            <p><a href="pages/order.html">Order</a></p>
+        </div>
+
+        <div class="social-media">
+            <p class="footer-title"><b>Follow Us</b></p>
+
+            <a href="#footer">
+                <i class="fa-brands fa-instagram"></i>
+                @nekoffe.id
+            </a>
+
+            <a href="#footer">
+                <i class="fa-brands fa-tiktok"></i>
+                @nekoffe.id
+            </a>
+
+            <a href="#footer">
+                <i class="fa-brands fa-facebook"></i>
+                Nekoffe Official
+            </a>
+
+        </div>
+
+        <div class="maps">
+            <p class="footer-title"><b>Visit Us</b></p>
+            <p>
+                Jl. Kucing Manis No. 17,
+                <br>
+                Bukit Besar, Ilir Barat I,
+                <br>
+                Palembang, Sumatera Selatan 30139.
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3450.0381994559266!2d104.73079597426225!3d-2.9849792398407993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3b75849ae5c517%3A0x30fb25ce5b5875b!2sUniversitas%20Sriwijaya!5e1!3m2!1sid!2sid!4v1794648067630!5m2!1sid!2sid" width="300" height="170" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+    </div>
+
+    <hr>
+
+    <p style="text-align: center;"> &copy; 2026 Nekoffe, All Rights Reserved.</p>
+
+   
 </footer>
 <script src="assets/js/cats.js"></script>
 <script>renderCats(document.getElementById("cats"),3)</script>

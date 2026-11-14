@@ -29,6 +29,7 @@
     --shadow-glow: 0 4px 14px rgba(151, 85, 85, 0.25);
 
     --font-main: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    --font-head:'Grandstander','Trebuchet MS',sans-serif;
     --container-max: 1150px;
 }
 
@@ -797,10 +798,45 @@ textarea {
    -------------------------------------------------------------------------- */
 footer {
     background-color: #2c1a15;
-    color: #ffffff;
-    text-align: center;
+    color: var(--color-accent-light);
     padding: clamp(20px, 3vw, 35px);
     font-size: clamp(13px, 1.1vw, 15px);
+}
+
+hr {
+    margin: 20px 0;
+}
+
+.nekoffe {
+    font-family: var(--font-head);
+    font-size: 25px;
+}
+
+.footer-layout {
+    display:flex;
+    justify-content: space-between;
+}
+
+.footer-title {
+    color: var(--color-bg);
+    font-size: 28px;
+}
+
+.social-media, .explore, .maps {
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-media a, .explore a {
+    color: var(--color-bg);
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-media a:hover, .explore a:hover {
+    color: var(--color-pink);
 }
 
 /* ==========================================================================
