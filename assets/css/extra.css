@@ -324,7 +324,12 @@ a:focus-visible,button:focus-visible {
 
 /* cats */
 .cats {
-    grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr))
+    display: grid;
+    grid-template-columns: repeat(3, 380px);
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .cat {
