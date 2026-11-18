@@ -6,11 +6,13 @@ const CONFIG = {
 
 const MENU = [
   { id: "americano", name: "Americano",         price: 20000, img: "../assets/img/americanp.jpg", drink: true },
-  { id: "latte",     name: "Cafe Latte",        price: 25000, img: "../assets/img/latte.jpg",     drink: true },
+  { id: "latte",     name: "Cafe Latte",        price: 25000, img: "../assets/img/lalate.jpg",     drink: true },
   { id: "mocha",     name: "Cafe Mocha",        price: 25000, img: "../assets/img/mocha.jpg",     drink: true },
   { id: "macchiato", name: "Caramel Macchiato", price: 32000, img: "../assets/img/machiato.jpg",  drink: true },
   { id: "melon",     name: "Melon Cream Soda",  price: 28000, img: "../assets/img/melon.jpg",     drink: true },
-  { id: "rollcake",  name: "Roll Cake",         price: 25000, img: "../assets/img/rollcake.jpg",  drink: false }
+  { id: "rollcake",  name: "Roll Cake",         price: 25000, img: "../assets/img/rorolcek.jpg",  drink: false },
+  { id: "Panna Cotta",  name: "Panna Cotta",    price: 30000, img: "../assets/img/pacotta.jpg",  drink: false },
+  { id: "Pancake",   name: "Strawberry Pancake",price: 40000, img: "../assets/img/pancake.jpg",  drink: false }
 ];
 
 const METHODS = [
@@ -31,7 +33,7 @@ const itemsHTML = items => items.map(i =>
   `<div class="row"><span>${i.qty} x ${i.name}</span><span>${rupiah(i.price * i.qty)}</span></div>`
 ).join("");
 
-const member = [
+const MEMBERS = [
   {
     username: "shakillamarsya",
     password: "0901282530086"
