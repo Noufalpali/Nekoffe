@@ -3,7 +3,7 @@
    Kalau file belum ada, kartu menampilkan placeholder. */
 const CATS = [
   { name: "Mochi",   photo: "mochichi.jpeg",   age: "2 years", breed: "Gray British Short Hair", tags: ["Rage", "Silly"], bio: "Greets people but will bite the moment you stopped petting her...", spot: "Infront of the door" },
-  { name: "Latte",   photo: "lalatte.jpeg",   age: "3 years", breed: "Calico cat", tags: ["Sweet", "Chatty"], bio: "Loves talking with people and easy going", spot: "on the cashier counter" },
+  { name: "Latte",   photo: "lalatte.jpeg",   age: "3 years", breed: "Calico cat", tags: ["Grumpy", "Chatty"], bio: "Loves talking with people and easy going", spot: "on the cashier counter" },
   { name: "Mocha",   photo: "mocha.jpeg",   age: "1 year",  breed: "Tabby cat", tags: ["Joyful", "Energic"], bio: "Often hides and surprise the guest, will play with your clothes", spot: "Under the table" },
   { name: "Oreo",    photo: "oreo.jpeg",    age: "4 years", breed: "Domestic Short Hair", tags: ["Smart", "Quiet"], bio: "Will walk around the cafe while picking up trash and throw them in the bin", spot: "On the sofa" },
   { name: "Biscuit", photo: "biscuit.jpeg", age: "2 years", breed: "Orange Domestic Cat", tags: ["Greedy", "Noisy"], bio: "Act cute to get the guest's food and will scream if he dont get the food", spot: "Food storage" },
