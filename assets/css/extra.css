@@ -1,4 +1,4 @@
-﻿/* Nekoffe - fonts, landing, cats page, page transition, cat cursor (loads after style.css) */
+/* Nekoffe - fonts, landing, cats page, page transition, cat cursor (loads after style.css) */
 :root {
     --font-main:'Nunito','Trebuchet MS',sans-serif;
     --font-head:'Grandstander','Trebuchet MS',sans-serif;
@@ -385,26 +385,38 @@ a:focus-visible,button:focus-visible {
 .pt {
     position:fixed;
     inset:0;
+    width:100%;
+    height:100vh;
+    height:100dvh;
     z-index:9998;
     background:#f4a3b0;
     display:flex;
     flex-direction:column;
-    gap:6px;
+    gap:clamp(6px,1.5vmin,14px);
     align-items:center;
     justify-content:center;
+    padding:env(safe-area-inset-top) max(16px,env(safe-area-inset-right)) env(safe-area-inset-bottom) max(16px,env(safe-area-inset-left));
     pointer-events:none;
     color:#fff;
-    font:800 clamp(26px,6vw,48px) var(--font-head);
-    border-radius:0 0 50% 50%/0 0 10vh 10vh;
+    font:800 clamp(24px,min(6.5vw,8dvh),72px)/1.1 var(--font-head);
+    text-align:center;
+    border-radius:0 0 50% 50%/0 0 clamp(28px,8dvh,90px) clamp(28px,8dvh,90px);
+    will-change:transform,border-radius;
+    backface-visibility:hidden;
     animation:ptIn .75s cubic-bezier(.7,0,.2,1) both
 }
 
 .pt svg {
-    width:clamp(64px,13vw,110px);
+    width:clamp(60px,min(18vw,20dvh),180px);
+    height:auto;
+    aspect-ratio:1/1;
+    flex-shrink:0;
+    display:block;
     animation:bob .6s ease-in-out infinite
 }
 
 .pt.go {
+    pointer-events:all;
     animation:ptOut .45s cubic-bezier(.7,0,.3,1) forwards;
     border-radius:0
 }
@@ -414,7 +426,8 @@ a:focus-visible,button:focus-visible {
 }
 
 @keyframes ptOut {
-    from{transform:translateY(100%)}to{transform:none}
+    0%{transform:translateY(105%);border-radius:50% 50% 0 0/clamp(28px,8dvh,90px) clamp(28px,8dvh,90px) 0 0}
+    100%{transform:none;border-radius:0}
 }
 
 /* cat cursor */
