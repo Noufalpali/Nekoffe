@@ -24,14 +24,25 @@
 
   // ── page transition ────────────────────────────────────────────────────────
   const pt = add("div", "pt", face + "<span>Nya~</span>");
-  addEventListener("pageshow", e => { if (e.persisted) pt.classList.remove("go"); });
+  let going = false;
+  addEventListener("pageshow", e => {
+    if (e.persisted || going) {
+      going = false;
+      pt.classList.remove("go");
+      pt.style.animation = "none";
+      pt.offsetHeight;
+      pt.style.animation = "";
+    }
+  });
   d.addEventListener("click", e => {
     const a = e.target.closest("a[href]");
-    if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || a.target || a.hasAttribute("download")) return;
+    if (!a || going || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || a.target || a.hasAttribute("download")) return;
+    const rawHref = a.getAttribute("href");
     const u = new URL(a.href);
     if (!/^(https?|file):$/.test(u.protocol) || (u.protocol !== "file:" && u.origin !== location.origin)) return;
-    if (u.pathname === location.pathname && u.hash) return;
+    if (u.pathname === location.pathname && (u.hash || rawHref.startsWith("#"))) return;
     e.preventDefault();
+    going = true;
     pt.classList.add("go");
     setTimeout(() => { location.href = a.href; }, rm ? 0 : 450);
   });
