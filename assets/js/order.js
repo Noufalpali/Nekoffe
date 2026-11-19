@@ -32,6 +32,35 @@ function refresh() {
   document.getElementById("summaryTotal").textContent = rupiah(total);
 }
 
+const orderTypeInputs = document.querySelectorAll(
+  'input[name="order_type"]'
+);
+
+const addressInput = document.querySelector(
+  'textarea[name="address"]'
+);
+
+function updateAddressValidation() {
+  const selectedType = document.querySelector(
+    'input[name="order_type"]:checked'
+  ).value;
+
+  if (selectedType === "delivery") {
+    addressInput.required = true;
+    addressInput.placeholder = "Enter your delivery address...";
+  } else {
+    addressInput.required = false;
+    addressInput.placeholder = "Write your special notes (optional)...";
+  }
+}
+
+orderTypeInputs.forEach(input => {
+  input.addEventListener("change", updateAddressValidation);
+});
+
+// Jalankan saat halaman dibuka
+updateAddressValidation();
+
 document.getElementById("orderForm").addEventListener("submit", e => {
   e.preventDefault();
   const items = chosen();

@@ -36,9 +36,12 @@ box.addEventListener("change", e => {
     });
     payBtn.textContent = "Pay Cash";
   } else if (method === "qris") {
-    detail.innerHTML = `<div class="qr-box">QRIS<br><small>Scan to pay ${rupiah(total)}<br>
-      (put your QR image in assets/img/qris.png)</small></div>`;
-    payBtn.textContent = "I Have Paid";
+  detail.innerHTML = `
+    <div class="qr-box qr-has-img">
+      <img src="../assets/img/qris.png" alt="QRIS Nekoffe">
+      <small>Scan lalu bayar tepat <b>${rupiah(total)}</b></small>
+    </div>`;
+  payBtn.textContent = "I Have Paid";
   } else {
     const b = CONFIG.bank;
     detail.innerHTML = `

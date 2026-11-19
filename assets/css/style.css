@@ -661,6 +661,19 @@ textarea {
     line-height: 1.4;
 }
 
+.qr-box.qr-has-img {
+    width: auto;
+    height: auto;
+    max-width: 320px;
+    border-style: solid;
+    background: #fff;
+}
+.qr-box.qr-has-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* --------------------------------------------------------------------------
    Submit Area
    -------------------------------------------------------------------------- */
