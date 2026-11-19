@@ -257,13 +257,19 @@ a:focus-visible,button:focus-visible {
 }
 
 .dishes {
-    grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr))
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:clamp(10px,2vw,20px);
+    max-width:980px;
+    margin:0 auto
 }
 
 .dish {
     background:var(--color-bg);
-    border-radius:20px;
+    border-radius:clamp(14px,2.2vw,20px);
     overflow:hidden;
+    min-width:0;
+    overflow-wrap:break-word;
     transition:transform .3s
 }
 
@@ -273,27 +279,29 @@ a:focus-visible,button:focus-visible {
 
 .dish img {
     width:100%;
+    max-width:100%;
+    height:auto;
     aspect-ratio:4/3;
     object-fit:cover
 }
 
 .dish div {
-    padding:16px 18px 20px
+    padding:clamp(10px,1.6vw,14px) clamp(10px,1.8vw,16px) clamp(12px,1.8vw,18px)
 }
 
 .dish h3 {
     color:var(--choc);
-    font-size:20px
+    font-size:clamp(14px,1.8vw,18px)
 }
 
 .dish p {
-    font-size:15px;
-    margin:2px 0 8px
+    font-size:clamp(11px,1.3vw,14px);
+    margin:2px 0 6px
 }
 
 .dish b {
     color:var(--color-accent);
-    font-size:18px
+    font-size:clamp(13px,1.6vw,17px)
 }
 
 .steps {
@@ -526,7 +534,11 @@ html.cat-on input,html.cat-on textarea {
     /* rule grid lama untuk .cats sudah diganti flex di atas */
 }
 
-/* cats: kolom menyesuaikan breakpoint */
+/* cats & dishes: kolom menyesuaikan breakpoint */
+@media(min-width:640px) {
+    .dishes { grid-template-columns:repeat(4,minmax(0,1fr)) }
+}
+
 @media(min-width:768px) {
     .cats { --cat-cols: 3 }     /* tablet ke atas: 3 kolom */
 }
@@ -554,17 +566,19 @@ html.cat-on input,html.cat-on textarea {
 /* testimonials */
 .testimonials {
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));
-    gap:clamp(16px,2.5vw,28px)
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:clamp(8px,2vw,28px)
 }
 
 .testi-card {
     background:#fff;
-    border-radius:24px;
+    border-radius:clamp(12px,2.2vw,24px);
     overflow:hidden;
     box-shadow:var(--shadow-card);
     display:flex;
     flex-direction:column;
+    min-width:0;
+    overflow-wrap:break-word;
     transition:transform .3s
 }
 
@@ -587,17 +601,17 @@ html.cat-on input,html.cat-on textarea {
 }
 
 .testi-card blockquote {
-    padding:20px 22px 24px;
+    padding:clamp(8px,1.8vw,20px) clamp(8px,2vw,22px) clamp(10px,2.2vw,24px);
     margin:0;
     flex:1;
     display:flex;
     flex-direction:column;
-    gap:12px
+    gap:clamp(6px,1.2vw,12px)
 }
 
 .testi-card blockquote p {
-    font-size:clamp(14px,1.1vw,16px);
-    line-height:1.6;
+    font-size:clamp(10px,1.35vw,16px);
+    line-height:1.45;
     color:#444;
     margin:0
 }
@@ -607,5 +621,6 @@ html.cat-on input,html.cat-on textarea {
     font-weight:800;
     font-family:var(--font-head);
     color:var(--choc);
-    font-size:15px
+    font-size:clamp(10px,1.3vw,15px);
+    margin-top:auto
 }
